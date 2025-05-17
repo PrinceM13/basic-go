@@ -37,8 +37,8 @@ func outputText(text string) {
 	fmt.Print(text)
 }
 
-func calculateFutureValue(investmentAmount, years, expectedReturnRate float64) (float64, float64) {
-	fv := (investmentAmount) * math.Pow(1+expectedReturnRate/100, (years))
-	frv := fv / math.Pow(1+inflationRate/100, years)
-	return fv, frv
+func calculateFutureValue(investmentAmount, years, expectedReturnRate float64) (fv float64, frv float64) {
+	fv = (investmentAmount) * math.Pow(1+expectedReturnRate/100, (years))
+	frv = fv / math.Pow(1+inflationRate/100, years)
+	return fv, frv // * explicit return is more readable than just return
 }
