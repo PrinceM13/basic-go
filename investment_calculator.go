@@ -7,7 +7,7 @@ import (
 
 const inflationRate = 2.5
 
-func main() {
+func oldMain() {
 	var investmentAmount, years float64
 	expectedReturnRate := 5.5
 
